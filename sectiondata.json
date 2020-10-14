@@ -1,1 +1,6 @@
-{ "section1": { "text": "Dit is een tekst.", "image-url": "Afbeeldingsurl"} }
+{
+  "section1": {
+    "text": "Dit is een tekst.\n",
+    "image-url": "Afbeeldingsurl\n"
+  }
+}
