@@ -1,6 +1,6 @@
 {
   "section1": {
-    "text": "Dit is een tekst.\n",
-    "image-url": "Afbeeldingsurl\n"
+    "text": "Dit is een tekst.\n\n",
+    "image-url": "Afbeeldingsurl\n\n"
   }
 }
