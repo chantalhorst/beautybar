@@ -8531,6 +8531,36 @@ en zullen de haartjes zelfs langer weg blijven.</p>
 			}
 		}
 		getResponse();
+				
+		var getJSON = function(url, callback) {
+    			var xhr = new XMLHttpRequest();
+    			xhr.open('GET', url, true);
+    			xhr.responseType = 'json';
+    			xhr.onload = function() {
+      			var status = xhr.status;
+      			if (status === 200) {
+        			callback(null, xhr.response);
+      			} else {
+        			callback(status, xhr.response);
+      			}
+    		      };
+    		      xhr.send();
+		};	
+		
+		getJSON('https://www.beautybarleusden.nl/sectiondata.json',
+			function(err, data) {
+  				if (err !== null) {
+    					alert('Something went wrong: ' + err);
+  				} else {
+    					document.getElementById('element-0f71ac37ccb2a5d').innerHTML = data['section1']['text'];
+					document.getElementById('vbid-57d1b1a7-epr930um').innerHTML = data['section2']['text'];
+					document.getElementById('vbid-57d1b1a7-bbobgoqp').innerHTML = data['section3']['text'];
+					document.getElementById('vbid-57d1b1a7-1aw0mr2d').innerHTML = data['section4']['text'];
+					document.getElementById('element-0f71ac37ccb2a5d').innerHTML = data['section5']['text'];
+					document.getElementById('vbid-f58d55cc-fyl1ckuo').innerHTML = data['section6']['text'];
+  				}
+		});
+									  
 	</script>
 	
 	<script src="//im-creator.com/js/lightbox.js?v=1.5.8" type="text/javascript"></script>
