@@ -6785,7 +6785,8 @@ img#category-img {
   				if (err !== null) {
     					alert('Something went wrong: ' + err);
   				} else {
-					document.getElementById('vbid-101e28d9-vab0l6mq').style.backgroundImage = url(data['section2']['image-url']);
+					var url = data['section2']['image-url'];
+					document.getElementById('vbid-101e28d9-vab0l6mq').style.backgroundImage = `url(${url})`;
   				}
 		});
 	</script>
