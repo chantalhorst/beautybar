@@ -8552,12 +8552,13 @@ en zullen de haartjes zelfs langer weg blijven.</p>
   				if (err !== null) {
     					alert('Something went wrong: ' + err);
   				} else {
-    					document.getElementById('headtext').innerHTML = data['section1']['text'];
+    					document.getElementById('headtext').textContent = data['section1']['text'];
 					document.getElementById('vbid-57d1b1a7-epr930um').innerHTML = data['section2']['text'];
 					document.getElementById('vbid-57d1b1a7-bbobgoqp').innerHTML = data['section3']['text'];
 					document.getElementById('vbid-57d1b1a7-1aw0mr2d').innerHTML = data['section4']['text'];
 					document.getElementById('element-0f71ac37ccb2a5d').innerHTML = data['section5']['text'];
 					document.getElementById('vbid-f58d55cc-fyl1ckuo').innerHTML = data['section6']['text'];
+					document.getElementById('vbid-101e28d9-vab0l6mq').style.backgroundImage = url(data['section1']['image-url']);
   				}
 		});
 									  
